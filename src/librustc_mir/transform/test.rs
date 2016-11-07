@@ -23,7 +23,7 @@ impl TestPassVisitor {
 
 impl<'tcx> MutVisitor<'tcx> for TestPassVisitor {
     fn visit_basic_block_data(&mut self, block: BasicBlock, _: &mut BasicBlockData<'tcx>) {
-        println!("Visit basic block {:?}", block);
+        debug!("Visit basic block {:?}", block);
     }
 }
 
